@@ -2,6 +2,7 @@
 #This version allows the sales manager to remove items from vehicles list.
 
 AllowedVehiclesList = ['Ford F-150' , 'Chevrolet Silverado' , 'Tesla Cybertruck' , 'Toyota Tundra' , 'Nissan Titan' , 'Rivian R1T' , 'Ram 1500']
+import os
 file_name="./allowed_database.txt"
 def init_file():
     if not os.path.exists(file_name):
