@@ -2,7 +2,22 @@
 #This version allows the sales manager to remove items from vehicles list.
 
 AllowedVehiclesList = ['Ford F-150' , 'Chevrolet Silverado' , 'Tesla Cybertruck' , 'Toyota Tundra' , 'Nissan Titan' , 'Rivian R1T' , 'Ram 1500']
-
+file_name="./allowed_database.txt"
+def init_file():
+    if not os.path.exists(file_name):
+        with open(file_name, "w") as file:
+            pass
+    items = read_file()
+    if len(items) == 0:
+        with open(file_name,"w") as file:
+            for vehicle in AllowedVehiclesList:
+                file.write(vehicle+"\n")
+                print(f"Adding {vehicle} to database")
+            print(f"database has been initialized")
+    else:
+        print(f"file has already been initialized with {len(items)} items")
+            
+            
 #Adding the menu.
 def print_menu():
     print('********************************')
