@@ -26,6 +26,13 @@ def read_file():
 def add_to_file(vehicle_name):
     with open(file_name,"a+") as file:
         file.write(vehicle_name+"\n")
+
+def remove_from_file(vehicle_name):
+    vehicles = read_file()
+    vehicles.remove(vehicle_name)
+    with open(file_name, "w") as file:
+        for vehicle in vehicles:
+            file.write(vehicle+"\n")
             
             
 #Adding the menu.
