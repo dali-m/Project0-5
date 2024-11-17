@@ -22,6 +22,10 @@ def read_file():
         items = [line.strip() for line in file]
         return items
     return []
+
+def add_to_file(vehicle_name):
+    with open(file_name,"a+") as file:
+        file.write(vehicle_name+"\n")
             
             
 #Adding the menu.
