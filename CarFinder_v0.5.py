@@ -16,6 +16,12 @@ def init_file():
             print(f"database has been initialized")
     else:
         print(f"file has already been initialized with {len(items)} items")
+
+def read_file():
+    with open(file_name,"r") as file:
+        items = [line.strip() for line in file]
+        return items
+    return []
             
             
 #Adding the menu.
